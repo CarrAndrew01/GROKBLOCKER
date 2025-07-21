@@ -1,10 +1,25 @@
 {
   "manifest_version": 3,
   "name": "GrokBlocker",
+  "action": {
+    "default_title" : "testing the GROKBLOCKER",
+    "default_popup" : "options.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
   "version": "1.0",
   "description": "Removes Grok Askers",
-  "permissions": ["activeTab", "scripting"],
+  "permissions": ["activeTab", "scripting", "storage"],
   "host_permissions": ["https://x.com/*"],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["switch.html"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
   "content_scripts": [
     {
       "matches": ["https://x.com/*"],
