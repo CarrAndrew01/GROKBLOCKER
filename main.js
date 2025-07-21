@@ -47,6 +47,7 @@ true=hide, false=show
 */
 function HideOrReveal(hide){
     elements.forEach((grok) => {
+        console.log("1");
         if(grok != null){
             hide ? grok.style.display = "none" : grok.style.display = "";
         }
@@ -75,7 +76,7 @@ async function main(){
         //back out and get rid of the switch if we aren't on a status page
         const url = window.location.href;
         const urlParts = url.split('/');
-        if(!urlParts.includes("status")){ 
+        if(!urlParts.includes("status")){ //I'm not 100% sure about this (TODO)
              if (onOff) {
                 onOff.style.display = "none";
             }
