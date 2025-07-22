@@ -10,7 +10,7 @@
   },
   "version": "1.0",
   "description": "Removes Grok Askers",
-  "permissions": ["activeTab", "scripting", "storage"],
+  "permissions": ["activeTab", "scripting", "storage", "tabs"],
   "host_permissions": ["https://x.com/*"],
 
   "web_accessible_resources": [
